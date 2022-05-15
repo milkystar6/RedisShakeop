@@ -434,6 +434,7 @@ func (ds *jdbSyncer) syncCommand(reader *bufio.Reader) {
 			//	rediscommand = rediscommand + "$" + strconv.Itoa(strlength) + "\r\n" + str +"\r\n"
 			//}
 			//fmt.Println(rediscommand)
+			// 测试让日志输出为aof格式
 
 			ds.forward.Incr()
 			ds.wbytes.Add(int64(length))
