@@ -402,7 +402,6 @@ func (ds *jdbSyncer) syncCommand(reader *bufio.Reader) {
 			if strings.EqualFold(scmd, "ping") {
 				continue
 			}
-
 			ds.sendBuf <- cmdDetail{Cmd: scmd, Args: argv}
 		}
 	}()
